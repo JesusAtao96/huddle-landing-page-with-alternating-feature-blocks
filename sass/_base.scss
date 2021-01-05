@@ -1,16 +1,15 @@
 // COLOR VARIABLES
-$dark-violet: hsl(256, 26%, 20%);
-$grayish-blue: hsl(216, 30%, 68%);
-$very-dark-violet: hsl(270, 9%, 17%);
-$dark-grayish-violet: hsl(273, 4%, 51%);
-$very-light-gray: hsl(0, 0%, 98%);
+$pink: hsl(322, 100%, 66%);
+$very-pale-cyan: hsl(193, 100%, 96%);
+$very-dark-cyan: hsl(192, 100%, 9%);
+$grayish-blue: hsl(208, 11%, 55%);
 
 $white: #fff;
 $black: #000;
 
 // FONT VARIABLES
-$font-primary: 'Karla', sans-serif;
-$font-heading: 'DM Serif Display', serif;
+$font-primary: 'Open Sans', sans-serif;
+$font-heading: 'Poppins', sans-serif;
 
 // Responsive Breakpoints -> 1em = 16px
 $bp-large: 68.75em; // 1100px / 16px = 68.75
@@ -27,16 +26,16 @@ $bp-small: 37.5em; // 600px / 16px = 37.5
 
 html {
     box-sizing: border-box;
-    font-size: 100%;
+    font-size: 112.5%; // (18 / 16) * 100 = 112.5% -> 1rem = 18px
 
-    @media only screen and (max-width: $bp-large) {
+    /* @media only screen and (max-width: $bp-large) {
         font-size: 97%;
-    }
+    } */
 }
 
 body {
     background-color: $white;
-    color: $very-dark-violet;
+    color: $grayish-blue;
     font-family: $font-primary;
     font-weight: 400;
 }
@@ -60,7 +59,7 @@ body {
     }
 }
 
-.attribution {
+/* .attribution {
     grid-column: 1 / -1;
     background-color: $grayish-blue;
     text-align: center;
@@ -71,4 +70,4 @@ body {
         color: $dark-violet;
         font-weight: bold;
     }
-}
+} */

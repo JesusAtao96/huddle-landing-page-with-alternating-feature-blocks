@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 112.5%;
+  /* @media only screen and (max-width: $bp-large) {
+        font-size: 97%;
+    } */ }
+
+body {
+  background-color: #fff;
+  color: #808d99;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
+
+.container {
+  display: grid;
+  grid-template-rows: 75px calc(100vh - 75px) min-content min-content min-content;
+  grid-template-columns: [full-start] 1fr [center-start] minmax(1080px, 1fr) [center-end] 1fr [full-end]; }
+  @media only screen and (max-width: 68.75em) {
+    .container {
+      grid-template-columns: [full-start] 70px [center-start] 1fr [center-end] 70px [full-end]; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 75px 1000px min-content min-content min-content;
+      grid-template-columns: [full-start] 50px [center-start] 1fr [center-end] 50px [full-end]; } }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      grid-template-columns: [full-start] 20px [center-start] 1fr [center-end] 20px [full-end]; } }
+
+/* .attribution {
+    grid-column: 1 / -1;
+    background-color: $grayish-blue;
+    text-align: center;
+    padding: 20px;
+    color: $dark-violet;
+
+    a {
+        color: $dark-violet;
+        font-weight: bold;
+    }
+} */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  font-size: .8rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all .2s;
+  outline: 0;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  /*  &--primary {
+        background-color: transparent;
+        color: $very-light-gray;
+        border-color: $very-light-gray;
+        filter: brightness(80%);
+
+        &:hover {
+            background-color: $very-light-gray;
+            color: $dark-violet;
+            filter: brightness(100%);
+        }   
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: $dark-violet;
+        border-color: $dark-violet;
+
+        &:hover {
+            background-color: $dark-violet;
+            color: $very-light-gray;
+        }
+    } */ }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes accordionIn {
+  0% {
+    height: 0px; }
+  100% {
+    height: 500px; } }
