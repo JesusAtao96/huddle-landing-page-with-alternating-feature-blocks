@@ -12,7 +12,7 @@ $font-primary: 'Open Sans', sans-serif;
 $font-heading: 'Poppins', sans-serif;
 
 // Responsive Breakpoints -> 1em = 16px
-$bp-large: 68.75em; // 1100px / 16px = 68.75
+$bp-large: 62.5em; // 1000px / 16px = 62.5
 $bp-medium: 50em; // 800px / 16px = 50
 $bp-small: 37.5em; // 600px / 16px = 37.5
 
@@ -28,35 +28,24 @@ html {
     box-sizing: border-box;
     font-size: 112.5%; // (18 / 16) * 100 = 112.5% -> 1rem = 18px
 
-    /* @media only screen and (max-width: $bp-large) {
-        font-size: 97%;
-    } */
+    @media only screen and (max-width: $bp-large) {
+        font-size: 105%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 100%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 95%;
+    }
 }
 
 body {
     background-color: $white;
-    color: $grayish-blue;
+    color: $very-dark-cyan;
     font-family: $font-primary;
     font-weight: 400;
-}
-
-.container {
-    display: grid;
-    grid-template-rows: 75px calc(100vh - 75px) min-content min-content min-content;
-    grid-template-columns: [full-start] 1fr [center-start] minmax(1080px, 1fr) [center-end] 1fr [full-end];
-
-    @media only screen and (max-width: $bp-large) {
-        grid-template-columns: [full-start] 70px [center-start] 1fr [center-end] 70px [full-end];
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 75px 1000px min-content min-content min-content;
-        grid-template-columns: [full-start] 50px [center-start] 1fr [center-end] 50px [full-end];
-    }
-
-    @media only screen and (max-width: $bp-small) {
-        grid-template-columns: [full-start] 20px [center-start] 1fr [center-end] 20px [full-end];
-    }
 }
 
 /* .attribution {
